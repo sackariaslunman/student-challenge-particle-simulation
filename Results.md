@@ -39,10 +39,10 @@ In the end I got down to 5 seconds with the python code using dim_depth of 3, wh
 
 # Refining
 
-To make the code faster I rewrote the program in C++. I used ref types to avoid copying the data and I compiled the code with the -O3 optimization flag. To compile the code run `g++ -o main.exe main.cpp -O3 -std=c++20` (you can use another compiler than g++). To run the code run `main.exe 0.05 5` where 0.05 is the min distance and 5 is the cutoff value. You can change these however you like, but they need to be positive numbers. 
+To make the code faster I rewrote the program in C++. I used ref types to avoid copying the data and I compiled the code with the -O3 optimization flag. To compile the code run `g++ -o main.exe main.cpp -O3 -std=c++20` (you can use another compiler than g++). The main.exe file is also in the repo, compiled for Windows. To run the code run `main.exe 0.05 5` where 0.05 is the min distance and 5 is the cutoff value. You can change these however you like, but they need to be positive numbers. The algorithm runs 3 times using different dim_depths.
 
-In the end I got down to a run time of 1500 ms, but for some reason using dim_depth = 1 is faster than dim_depth = 3.
+In the end I got down to a run time of 1200 ms, but for some reason using dim_depth = 1 is faster than dim_depth = 3.
 
 # Conclusion
 
-After some experimentation and looking at the code on and off for a week, I think I reached a pretty good level, but there could definitely be some improvements in the code. I think the C++ program can run way faster but I'm not sure where the bottleneck is. Will have to investigate further.
+After some experimentation and looking at the code on and off for a week, I think I reached a pretty good level, but there could definitely be some improvements in the code. I think the C++ program can run way faster but I'm not sure where the bottleneck is. Will have to investigate further. Still, the algorithm is way faster than brute forcing the entire list of 16124 points, which takes ~4 minutes
